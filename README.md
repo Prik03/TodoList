@@ -29,8 +29,8 @@ Make sure you have the following installed on your system:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/todolist-app.git
-cd todolist-app
+git clone https://github.com/Prik03/TodoList.git
+cd todolist
 ```
 
 ### 2. Install dependencies
@@ -47,13 +47,13 @@ npm install
 #### Backend
 
 ```bash
-cd ../backend
+cd ../server
 npm install
 ```
 
 ### 3. Setup Environment Variables
 
-Create a `.env` file in the `backend` directory and add the following environment variables:
+Create a `.env` file in the `server` directory and add the following environment variables:
 
 ```
 MONGO_URI=<your-mongodb-connection-string>
@@ -66,10 +66,10 @@ Replace `<your-mongodb-connection-string>` with the connection string of your Mo
 
 #### 4.1 Start the backend server
 
-In the `backend` directory, run:
+In the `server` directory, run:
 
 ```bash
-npm start
+nodemon index
 ```
 
 This will start the Node.js server on port `5000` (or the port you configured in `.env`).
@@ -79,7 +79,7 @@ This will start the Node.js server on port `5000` (or the port you configured in
 In the `frontend` directory, run:
 
 ```bash
-npm start
+npm run dev
 ```
 
 This will start the React frontend on port `3000`.
@@ -96,10 +96,10 @@ http://localhost:3000
 
 The backend exposes the following API routes:
 
-- `GET /api/tasks`: Fetch all tasks
-- `POST /api/tasks`: Create a new task
-- `PUT /api/tasks/:id`: Update an existing task
-- `DELETE /api/tasks/:id`: Delete a task
+- `GET /api/todo`: Fetch all tasks
+- `POST /api/todo`: Create a new task
+- `PUT /api/todo/:id`: Update an existing task
+- `DELETE /api/todo/:id`: Delete a task
 
 ## Folder Structure
 
