@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const TodoList = ({ todo, setTodo }) => {
-  const [isEditing, setIsEditing] = useState(null);
-  const [editedName, setEditedName] = useState("");
-
+const TodoList = ({
+  todo,
+  setTodo,
+  isEditing,
+  setEditedName,
+  setIsEditing,
+  editedName,
+}) => {
   useEffect(() => {
     axios
       .get("http://localhost:3000/api/todo")

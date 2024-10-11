@@ -6,6 +6,8 @@ function App() {
   const [update, setUpdate] = useState();
   const [change, setChange] = useState("");
   const [todo, setTodo] = useState([]);
+  const [isEditing, setIsEditing] = useState(null);
+  const [editedName, setEditedName] = useState("");
 
   return (
     <>
@@ -16,7 +18,14 @@ function App() {
         Change={change}
         setTodo={setTodo}
       />
-      <TodoList todo={todo} setTodo={setTodo} />
+      <TodoList
+        todo={todo}
+        setTodo={setTodo}
+        isEditing={isEditing}
+        setEditedName={setEditedName}
+        editedName={editedName}
+        setIsEditing={setIsEditing}
+      />
     </>
   );
 }
